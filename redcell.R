@@ -1,0 +1,7 @@
+setwd("C:/Users/seann/OneDrive/Desktop/Chem 160/Mod 11")
+redcell<-read.table("redcell.txt", header=T)
+names(redcell)
+is.factor(redcell$ventilation)
+plot(folate~ventilation, data=redcell)
+model<-lm(folate~ventilation, data=redcell)
+summary(model)
